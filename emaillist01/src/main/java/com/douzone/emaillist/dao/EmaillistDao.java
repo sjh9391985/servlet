@@ -20,7 +20,7 @@ public class EmaillistDao {
 		try {
 			conn = getConnection();
 
-			String sql = "insert" + "into emaillist" + "values (?, ?, ?,?)";
+			String sql = "insert" + " into emaillist" + " values (?, ?, ?,?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setLong(1, vo.getNo());
 			pstmt.setString(2, vo.getFirstName());
@@ -58,7 +58,7 @@ public class EmaillistDao {
 		try {
 			conn = getConnection();
 
-			String sql = "select no, first_name, last_name, emali " + "from emaillist";
+			String sql = "select no, first_name, last_name, email " + "from emaillist" +" order by no desc ";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 

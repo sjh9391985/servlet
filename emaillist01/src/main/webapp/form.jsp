@@ -10,15 +10,16 @@
 	<p>
 		메일 리스트에 가입하려면,<br> 아래 항목을 기입하고 submit 버튼을 클릭하세요.
 	</p>
-	<form action="" method="">
+	<form action="<%=request.getContextPath()%>/Add.jsp" method="post">
+		No: <input type="text" name="no" value=""><br>
 		First name: <input type="text" name="fn" value=""><br>
 		Last name: <input type="text" name="ln" value=""><br>
 		Email address: <input type="text" name="email" value=""><br>
-		<input type="submit" value="submit">
+		<input type="submit" value="등록">
 	</form>
 	<br>
 	<p>
-	<a href="/emaillist01/index.jsp">리스트 바로가기</a>
+	<a href="<%=request.getContextPath()%>">리스트 바로가기</a>
 	</p>
 </body>
 </html>

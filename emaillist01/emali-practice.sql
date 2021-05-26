@@ -14,3 +14,7 @@ insert into emaillist values (2, '마', '이콜','micol@gmail.com');
 select no, name, password, message, reg_date from guestbook;
 
 desc guestbook;
+
+ -- alter table guestbook modify reg_date datetime null;
+
+delete from guestbook where no = 7;

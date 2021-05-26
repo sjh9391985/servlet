@@ -33,6 +33,8 @@ public class EmaillistController extends HttpServlet {
 
 		/* Action 을 받아야함 */
 		String action = request.getParameter("a");
+		
+		
 		if ("form".equals(action)) {
 
 			// 1. view 포워딩

@@ -29,7 +29,7 @@
 				<configuration>
 					<url>http://192.168.80.114:8080/manager/text</url>
 					<path>/emaillist01</path>
-					<username>admim</username>
+					<username>admin</username>
 					<password>manager</password>
 				</configuration>
 			</plugin>

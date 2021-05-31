@@ -1,6 +1,9 @@
 package jstlel;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,27 +16,36 @@ public class _01Servlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		//값
+		// 값
 		int iVal = 10;
 		long lVal = 10;
 		float fVal = 3.14f;
 		boolean bVal = true;
-		String sVal = "가나라다라마바사";
-		
+		String sVal = "가\n나\n라\n다\n라\n마바\n사\n";
+
 		request.setAttribute("ival", iVal);
 		request.setAttribute("lval", lVal);
 		request.setAttribute("fval", fVal);
 		request.setAttribute("bval", bVal);
 		request.setAttribute("sval", sVal);
-		
-		//객체 만들기
+
+		// 객체 만들기
 		UserVo userVo = new UserVo();
 		userVo.setNo(10);
 		userVo.setName("둘리");
-		
+
 		request.setAttribute("vo", userVo);
-		
-		
+
+		// 객체
+		Object obj = null;
+
+		// map
+		Map<String, Object> map = new HashMap<>();
+		map.put("ival",iVal);
+		map.put("lval",lVal);
+		map.put("fval",fVal);
+		map.put("bval",bVal);
+		request.setAttribute("m", map);
 		
 		
 		request.getRequestDispatcher("/WEB-INF/views/01.jsp").forward(request, response);
